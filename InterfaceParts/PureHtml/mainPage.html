@@ -1,0 +1,130 @@
+<html>
+	<head>
+		<style>
+			* {
+				box-sizing: border-box;
+			}
+			body {
+				margin: 0;
+			}
+			/*	Temporary section begins	*/
+			header {
+				background-color:aqua;
+			}
+			main {
+				background-color:coral;
+				height: 400px;
+			}
+			footer {
+				background-color: gold;
+				height: 200px;
+			}
+			.company-logo {
+				width: 100px;
+				height: 100px;
+				border-radius: 50%;
+				background-color: red;
+			}
+			/*	Temporary section ends	*/
+			.flex-block {
+				display: flex;
+				align-items: center;
+				padding: 10px 0;
+			}
+			.product-logo-inner {
+				font-size: 20px;
+				font-weight: bold;
+				color: blue;
+			}
+			.container-info {
+				margin: 0;
+				padding: 20px;
+			}
+			.menu  {
+				margin: 0;
+				list-style: none;
+				background-color: gold;
+			}
+			.menu a  {
+				color: black;
+				display: block;
+				padding: 10px;
+				cursor: pointer;
+				text-decoration: none;
+			}
+			a.active {
+				color: white;
+			}
+			.header-main {
+				justify-content: space-between;
+			}
+			.profile {
+				width: 150px;
+				justify-content: space-between;
+			}
+			.avatar {
+				width: 50px;
+				height: 50px;
+				border-radius: 50%;
+				background-color: red;
+			}
+			.copiright-info {
+				flex-direction: column;
+				align-items: flex-start;
+			}
+		</style>
+	</head>
+	<body>
+		<header id="header" class="container-info">
+			<div class="header-main flex-block">
+				<div class="product-logo">
+					<span class="product-logo-inner">
+						FLASH CARDS
+					</span>
+				</div>
+				<div class="profile flex-block">
+					<div class="login-container">
+						<span class="login">VAM</span>
+					</div>
+					<div class="avatar">
+						<a href="#changeImg">
+							<img src="..." alt="avatar">
+						</a>
+					</div>
+				</div>
+			</div>
+			<nav>
+				<ul class='menu flex-block'>
+					<li><a href="#header" class="active">Методика</a></li>
+					<li><a href="#header">Колоды</a></li>
+					<li><a href="#header">Мои колоды</a></li>
+					<li><a href="#header">Новая колода</a></li>
+				</ul>
+			</nav>
+		</header>
+		<main id="content" class="container-info">
+			...
+		</main>
+		<footer id="footer" class="container-info">
+			<div class="flex-block copiright-info">
+				<div class="company-logo">
+					<a href="#header">
+						<img src="..." alt="CompanyLogo">
+					</a>
+				</div>
+				<p>©VAM Company</p>
+			</div>
+		</footer>
+	</body>
+	<script>
+		const menu = document.querySelector('.menu');
+		let currentActive = document.querySelector('a.active')
+		menu.onclick = () => {
+			const target = event.target;
+			if (target.tagName !== 'A') return false;
+			currentActive.classList.toggle('active');
+			currentActive = target;
+			currentActive.classList.toggle('active')
+		}
+	</script>
+</html>

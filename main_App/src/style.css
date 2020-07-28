@@ -1,0 +1,202 @@
+:root {
+    --blue: #657bff;
+    --dark-blue: #5366d4;
+    --red: #FF3232;
+    --green: #33c533;
+    --yellow: #ffd701;
+}
+* {
+    box-sizing: border-box;
+    font-family: 'Russo One';
+}
+::-webkit-scrollbar {
+    background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background-color: var(--blue);
+    border-radius: 20px;
+}
+.sectionTitle {
+    font-size: 40px;
+    text-align: center;
+}
+button:focus {
+    outline: none;
+}
+img {
+    width: 100%;
+    height: auto;
+}
+
+header {
+    background-color: var(--blue);
+}
+body {
+    background-color: #f4f4f4;
+}
+body, input {
+    margin: 0;
+    font-size: 20px;
+}
+h1,
+h2 {
+    color: var(--blue);
+}
+input {
+    padding: 8px 20px;
+    border: none;
+    border-bottom: 4px solid var(--blue);
+    align-content: normal;
+    transition: 0.25s ease;
+}
+input:focus {
+   outline: none;
+   border-color: var(--yellow);
+}
+.login {
+    color: white;
+}
+.container-info {
+    margin: auto;
+    padding: 20px 0;
+}
+
+main {
+    height: calc(100vh - 223px);
+    overflow: auto;
+}
+
+.flex-block {
+    display: flex;
+    align-items: center;
+}
+
+.product-logo-inner {
+    font-size: 40px;
+    font-style: initial;
+    color: white;
+    font-family: 'Russo One', sans-serif;;
+}
+
+.profile {
+    justify-content: space-between;
+}
+.profile span {
+    color: white;
+}
+.panel {
+    background-color: white;
+    box-shadow: 0px 1px 3px 0px #06060657;
+    margin: 0 10px;
+    padding: 10px;
+    text-align: center;
+}
+.link a,
+.login-data {
+    display: block;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    padding: 7px;
+    min-width: 140px;
+}
+
+.auth a {
+    background-color: var(--green);
+}
+
+.regist a {
+	background-color: var(--yellow);
+}
+.logout {
+    background-color: var(--red);
+}
+.regist,
+.logout {
+    margin-left: 10px;
+}
+
+.header-main {
+    position: relative;
+    justify-content: space-between;
+}
+
+a.active {
+    color: white;
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: red;
+    overflow: hidden;
+}
+
+footer {
+    background-color: var(--blue);
+}
+
+.copiryght-info {
+    justify-content: space-evenly;
+    min-width: 300px;
+    margin: 0 auto;
+    padding: 10px 0;
+    color: white;
+}
+.card-side {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.company-logo {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.filter {
+    width: calc(100% - 320px);
+    right: 0;
+    position: absolute;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    background-color: var(--blue);
+}
+.filter-input {
+    color: white;
+    background-color: var(--dark-blue);
+    border: none;
+    width: 100%;
+}
+.filter-input:focus {
+    border: none;
+}
+
+.filter-input::placeholder {
+    color: var(--blue);
+}
+
+.filter-button {
+    color: white;
+    margin-left: 20px;
+}
+.icon-search {
+    margin-right: 10px;
+}
+@media (min-width: 1280px) {
+    .container-info {
+        width: 1200px;
+    }
+}
+@media (min-width: 769px) and (max-width: 1279px) {
+    .container-info {
+        width: 750px;
+    }
+}

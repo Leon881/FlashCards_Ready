@@ -1,0 +1,217 @@
+:root {
+    --blue: #657bff;
+    --dark-blue: #5366d4;
+    --red: #FF3232;
+    --green: #33c533;
+    --yellow: #ffd701;
+}
+* {
+    box-sizing: border-box;
+}
+.button-navigation {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    user-select: none;
+    margin: auto;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+.button-navigation:hover {
+    background-color: var(--yellow);
+    color: white;
+}
+button.next-card {
+    grid-column: 4;
+    grid-row: 4;
+}
+button.previous-card {
+    grid-column: 2;
+    grid-row: 4;
+}
+.table {
+    overflow: hidden;
+    position: relative;
+}
+.card-table {
+    height: 100%;
+    display: grid;
+    grid: 1fr 1fr 1fr auto / repeat(4, 1fr);
+    grid-gap: 5px;
+}
+.progress {
+    font-size: 30px;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    margin: auto;
+    width: 95%;
+    text-align: center;
+}
+.progress-bar {
+    height: 20px;
+    margin-bottom: 20px;
+    background-color: #e4e3e3;
+}
+.progress-line {
+    height: 100%;
+    background-color: var(--dark-blue);
+    transition: 0.5s ease;
+}
+
+.counter span {
+    margin: 20px;
+}
+
+.diagram {
+    position: relative;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    text-align: center;
+}
+
+.diagram-segment {
+    fill: transparent;
+}
+
+.positive-segment {
+    stroke: var(--green);
+    stroke-width: 4;
+    stroke-dashoffset: 25;
+    transition: 0.5s ease;
+}
+
+.negative-segment {
+    stroke: var(--red);
+    stroke-width: 3;
+    stroke-width: 3.5; 
+}
+.diagram .percentage {
+    fill: var(--blue);
+    font-size: 10px;
+    position: absolute;
+    dominant-baseline: central;
+    text-anchor: middle;
+}
+svg {
+    height: auto;
+    width: 85%;
+}
+.end-game {
+    margin: auto;
+}
+.end-button {
+    padding: 10px;
+    font-size: 20px;
+    background-color: var(--red);
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* Card */
+
+.card {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    transition: 0.25s ease;
+}
+.card-side {
+    font-size: 80px;
+    height: 100%;
+    width: 100%;
+    padding: 15px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.card-front {
+    background-color: var(--dark-blue);
+    color: white;
+    z-index: 100;
+}
+.card-back {
+    z-index: 1;
+    background-color: white;
+    border: 12px solid var(--dark-blue);
+}
+.card-section {
+    position: relative;
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    overflow: hidden;
+}
+.cards-navigation {
+    position: relative;
+    width: 150px;
+    height: 50px;
+    margin: auto;
+}
+
+.answer-button {
+    margin: 0 5px;
+    width: 200px;
+    height: 60px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    font-size: 40px;
+}
+.answer-button:focus {
+    outline: none;
+}
+.answer-negative {
+    background-color: var(--red);
+}
+.answer-positive {
+    background-color: var(--green);
+}
+
+.bg-positive {
+    background-color: var(--green);
+}
+.bg-negative {
+    background-color: var(--red);
+}
+.bg-neutral {
+    background-color: var(--dark-blue);
+}
+.position-right {
+    left: 100%;
+}
+.position-left {
+    left: -100%;
+}
+.position-center {
+    left: 0;
+}
+.bg-negative,
+.bg-negative ~ .card-side {
+    cursor: pointer;
+}
+
+/* Change flip state */
+
+.side-shown {
+    transform: rotateY(0deg);
+}
+
+.side-hidden {
+    transform: rotateY(90deg);
+}
+
+.animate .card-side {
+    transition-duration: 0.2s;
+    transition-timing-function: linear;  
+}
+
+.animate .side-shown {
+    transition-delay: 0.2s;
+}

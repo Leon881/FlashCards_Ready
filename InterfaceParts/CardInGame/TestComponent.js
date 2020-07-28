@@ -1,0 +1,13 @@
+export const decksArr=[{DeckId:1,
+    title: "test1",
+    size: 2,
+    progress: "0"}, {DeckId:2,
+    title: "test2",
+    size: 4,
+    progress: "0",}, {DeckId:3,
+    title: "test3",
+    size: 20,
+    progress: "0",}, {DeckId:4,
+    title: "test4",
+    size: 65,
+    progress: "0",}];

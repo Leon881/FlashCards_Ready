@@ -1,0 +1,11 @@
+﻿@model IEnumerable<GameBeta.Models.Pack>
+@{
+	ViewBag.Title = "FlashCards";
+}
+<table class="table">
+	<tr><td>Колода</td><td>Количество карточек</td></tr>
+	@foreach (var item in Model)
+	{
+		<tr><td>@item.Name</td><td>@item.Cards</td></tr>
+	}
+</table>

@@ -1,0 +1,89 @@
+/*cистемные настройки*/
+:root {
+	--blue: #657bff;
+	--dark-blue: #5366d4;
+	--red: #FF3232;
+	--green: #33c533;
+	--yellow: #ffd701
+}
+/*конец системных настроек*/
+* {
+	font-family: 'Russo One';
+}
+.form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 300px;
+	margin: auto;
+	padding: 10px;
+	background-color: var(--blue);
+	border-radius: 15px;
+}
+.form h2 {
+	margin: 20px 0 5px 0;
+	font-weight: normal;
+}
+.form hr {
+	width: 0%;
+	border: none;
+	height: 4px;
+	background-color: var(--yellow);
+	transition: 0.25s ease;
+	margin: 5px;
+}
+.form:hover hr {
+	width: 70%;
+}
+.registration-form,
+.authorization-form,
+.form-section label,
+.form-section input,
+.form-section a {
+	color: white;
+	text-decoration: none;
+	font-size: 18px;
+}
+.register {
+	box-sizing: border-box;
+	display: flex;
+	justify-content: center;
+}
+.form-section {
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.form-section:last-child {
+	flex-direction: row;
+	justify-content: space-around;
+}
+.registration-link {
+	margin-left: 10px;
+}
+.submit-button {
+	border: none;
+	padding: 10px;
+	background-color: var(--green);
+}
+.submit-button,
+.registration-link {
+	cursor: pointer;
+}
+.input-field {
+	padding: 5px;
+	border: none;
+	outline: none;
+	background-color: var(--dark-blue);
+	margin: 5px 0
+}
+.input-field,
+.registration-link {
+	border-bottom: 4px solid transparent;
+}
+.input-field:focus,
+.registration-link:hover
+{
+	border-bottom-color: var(--yellow);
+}

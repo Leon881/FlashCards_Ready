@@ -1,0 +1,95 @@
+.deck-info {
+    font-size: 27px;
+    padding: 20px 0;
+    color: white;
+    text-align: center;
+}
+
+#progress {
+    font-size: 30px;
+    text-align: center;
+}
+
+#deck {
+    position: relative;
+    margin: 5px;
+    width: 24%;
+    max-width: 300px;
+    min-height: 250px;
+    min-width: 250px;
+    height: 48%;
+}
+
+.deck-front {
+    background-color: var(--blue);
+    color: white;
+}
+
+.deck-back {
+    background-color: white;
+    border: 10px solid var(--blue);
+    user-select: none;
+}
+.side-shown,
+.side-hidden {
+    transition: 0.2s linear;
+}
+.side-shown {
+    transition-delay: 0.2s;
+    transform: rotateY(0deg);
+    box-shadow: 0px 4px 6px 0px #06060657;
+}
+.side-hidden {
+    transform: rotateY(90deg);
+}
+.options li:hover {
+    color: var(--yellow);
+    cursor: pointer;
+}
+
+.back {
+    pointer-events: none;
+}
+
+.deck-settings {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    left: calc(100% - 50px);
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.hint {
+    position: absolute;
+    opacity: 0;
+    width: 100px;
+    height: 100px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    animation: hint 5s ease infinite;
+}
+
+@keyframes hint {
+    10% {
+        opacity: 1;
+    }
+    20% {
+        opacity: 0;
+    }
+    30% {
+        opacity: 1;
+    }
+    40% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    60% {
+        opacity: 0;
+    }
+}

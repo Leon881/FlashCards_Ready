@@ -1,0 +1,234 @@
+{
+	"info": {
+		"_postman_id": "3ce7c91a-9b11-4fdd-98b2-4bd8af6040e6",
+		"name": "FalshCards",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "BasicDecks",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44355/api/basicdecks",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44355",
+					"path": [
+						"api",
+						"basicdecks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BasicDeck",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44355/api/basicdeck?deckid=2",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44355",
+					"path": [
+						"api",
+						"basicdeck"
+					],
+					"query": [
+						{
+							"key": "deckid",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User Decks List",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44355/api/usersdecks/deckslist?userid=2",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44355",
+					"path": [
+						"api",
+						"usersdecks",
+						"deckslist"
+					],
+					"query": [
+						{
+							"key": "userid",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User Deck and Cards",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44355/api/userdeck?userid=2&deckid=2",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44355",
+					"path": [
+						"api",
+						"userdeck"
+					],
+					"query": [
+						{
+							"key": "userid",
+							"value": "2"
+						},
+						{
+							"key": "deckid",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add User Deck",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"deck\": [\r\n        {\r\n            \"userId\": 2,\r\n            \"deckId\": 2,\r\n            \"title\": \"Letters\",\r\n            \"progress\": 0,\r\n            \"size\": 5\r\n        }],\r\n    \"cards\": [\r\n        {\r\n            \"userId\": 2,\r\n            \"deckId\": 2,\r\n            \"cardId\": 1,\r\n            \"eng\": \"a\",\r\n            \"rus\": \"а\",\r\n            \"rating\": 0\r\n        },\r\n        {\r\n            \"userId\": 2,\r\n            \"deckId\": 2,\r\n            \"cardId\": 2,\r\n            \"eng\": \"b\",\r\n            \"rus\": \"б\",\r\n            \"rating\": 0\r\n        },\r\n        {\r\n            \"userId\": 2,\r\n            \"deckId\": 2,\r\n            \"cardId\": 3,\r\n            \"eng\": \"c\",\r\n            \"rus\": \"ц\",\r\n            \"rating\": 0\r\n        },\r\n        {\r\n            \"userId\": 2,\r\n            \"deckId\": 2,\r\n            \"cardId\": 4,\r\n            \"eng\": \"d\",\r\n            \"rus\": \"д\",\r\n            \"rating\": 0\r\n        },\r\n        {\r\n            \"userId\": 2,\r\n            \"deckId\": 2,\r\n            \"cardId\": 5,\r\n            \"eng\": \"e\",\r\n            \"rus\": \"и\",\r\n            \"rating\": 0\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44355/api/usersdecks/newdeck",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44355",
+					"path": [
+						"api",
+						"usersdecks",
+						"newdeck"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BD Init",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44355/api/bdinitialization",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44355",
+					"path": [
+						"api",
+						"bdinitialization"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remove User Deck",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44355/api/usersdecks/removedeck?userid=2&deckid=2",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44355",
+					"path": [
+						"api",
+						"usersdecks",
+						"removedeck"
+					],
+					"query": [
+						{
+							"key": "userid",
+							"value": "2"
+						},
+						{
+							"key": "deckid",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update User Deck",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"deck\": [\r\n        {\r\n            \"userId\": 2,\r\n            \"deckId\": 2,\r\n            \"title\": \"Letters\",\r\n            \"progress\": 0,\r\n            \"size\": 3\r\n        }],\r\n    \"cards\": [\r\n        {\r\n            \"userId\": 2,\r\n            \"deckId\": 2,\r\n            \"cardId\": 1,\r\n            \"eng\": \"w\",\r\n            \"rus\": \"в\"\r\n        },\r\n        {\r\n            \"userId\": 2,\r\n            \"deckId\": 2,\r\n            \"cardId\": 2,\r\n            \"eng\": \"g\",\r\n            \"rus\": \"г\"\r\n        },\r\n        {\r\n            \"userId\": 2,\r\n            \"deckId\": 2,\r\n            \"cardId\": 3,\r\n            \"eng\": \"z\",\r\n            \"rus\": \"з\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44355/api/usersdecks/updatedeck?userid=2&deckid=2",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44355",
+					"path": [
+						"api",
+						"usersdecks",
+						"updatedeck"
+					],
+					"query": [
+						{
+							"key": "userid",
+							"value": "2"
+						},
+						{
+							"key": "deckid",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

@@ -1,0 +1,29 @@
+.table {
+    margin-left: 10px;
+    border: 1px solid;
+    table-layout: fixed;
+}
+#nameDeck, #sizeDeck {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    width: 250px;
+    height: 25px;
+}
+#addWord, #submitForm {
+    display: inline-block;
+    margin-left: 23px;
+    margin-top: 10px;
+}
+th {
+    border: 1px solid #eee;
+    font-weight: 600;
+    padding: 0.75rem;
+    text-align: center;
+    width: 110px;
+    height: 20px;
+}
+.word {
+    width: 145px;
+    height: 20px;
+}

@@ -1,0 +1,38 @@
+nav {
+    background-color: var(--yellow);
+}
+.menu  {
+    list-style: none;
+    padding: 0;
+}
+.menu a  {
+    color: black;
+    display: block;
+    padding: 10px;
+    cursor: pointer;
+    text-decoration: none;
+}
+.menu > li:first-child > a {
+    padding-left: 0;
+}
+.menu > li:last-child > a  {
+    padding-right: 0;
+}
+a.active {
+    color: white;
+}
+a.forFilter{
+   /*Не удаляй это Максэм. Класс нужен для фильтра  */
+}
+
+a.game{
+    /*Не удаляй это Максэм. Класс нужен для игры  */
+}
+
+a.updateDeck{
+    /*Не удаляй это Максэм. Класс нужен для обновления колоды  */
+}
+
+a.standard{
+    /*Не удаляй это Максэм */
+}
